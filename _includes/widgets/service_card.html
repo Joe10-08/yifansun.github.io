@@ -1,0 +1,32 @@
+{% assign services = site.service | sort: "date" | reverse | slice: 0, include.limit %}
+
+<div class="my-3 bg-white shadow-sm rounded-xl">
+
+    <h6 class="p-3 mb-0 border-bottom border-gray">
+        <i class="fas fa-users"></i> Academic Service
+    </h6>
+
+    <div class="px-3 pb-1 text-profile-bio">
+
+        {% for item in services %}
+
+        <div class="my-1 d-flex">
+
+            <div>
+                {{ item.title }}
+            </div>
+
+            <div class="ml-auto text-muted no-break">
+                <i>
+                <!-- 修改了这里，不使用 date 过滤器，直接读取 duration -->
+                {{ item.duration }}
+                </i>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>

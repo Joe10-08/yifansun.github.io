@@ -1,0 +1,29 @@
+{% assign teachings = site.teaching | sort: "date" | reverse | slice: 0, include.limit %}
+
+<div class="my-3 bg-white shadow-sm rounded-xl">
+    <h6 class="p-3 mb-0 border-bottom border-gray">
+        <i class="fas fa-chalkboard-teacher"></i> Teaching
+    </h6>
+
+    <div class="px-3 pb-1">
+
+        {% for item in teachings %}
+
+        <!-- 删除了 style="font-size:1.1rem;"，添加了 text-profile-bio 类 -->
+        <div class="my-2 d-flex align-items-start text-profile-bio">
+
+            <span class="mr-2">
+                •
+            </span>
+
+            <div>
+                <!-- 注意这里用了 item.description 和冒号后的空格 -->
+                <strong>{{ item.title }}:</strong> {{ item.description }}
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>

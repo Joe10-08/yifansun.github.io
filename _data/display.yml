@@ -1,8 +1,19 @@
 homepage:
   show_experience: true
-  show_news: true
+  show_awards: true
   show_selected_publications: true
-  num_news: 10
+  num_awards: 10
+
+  show_teaching: true
+  num_teaching: 5
+
+  show_service: true
+  num_service: 5
+
+  show_books: true
+  num_books: 5
+
+
 
 # Feel free to replace the footer text if you would like to, but I will greatly appreciate it 
 # if you keep the link to the template so that more people can benefit from it. Thanks!

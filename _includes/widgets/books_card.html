@@ -1,0 +1,18 @@
+{% assign books = site.books | sort: "date" | reverse | slice: 0, include.limit %}
+
+<div class="my-3 bg-white shadow-sm rounded-xl">
+    <h6 class="p-3 mb-0 border-bottom border-gray">
+        <i class="fas fa-book"></i> Books
+    </h6>
+
+    <div class="px-3 pb-1 text-profile-bio">
+
+        {% for item in books %}
+        <!-- 去掉了 d-flex 和项目符号 •，保留了上下边距 my-2 -->
+        <div class="my-2">
+            {{ item.title }}
+        </div>
+        {% endfor %}
+
+    </div>
+</div>

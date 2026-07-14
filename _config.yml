@@ -36,9 +36,12 @@ plugins:
 
 collections:
   - publications
-  - news
-  - showcase
+  - awards
   - project
+  - teaching
+  - service
+  - books
+
   
 
 

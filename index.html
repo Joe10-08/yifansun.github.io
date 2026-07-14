@@ -19,20 +19,42 @@ navbar_title: Home
             {% include widgets/experience_card.html %}
         {% endif %}
 
-        {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
-        {% endif %}
-
         {% if site.data.display.homepage.show_selected_publications %}
         {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
         {%
         include widgets/publication_card.html
         publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
+        title='<i class="fas fa-star"></i> Selected Recent Publications'
         %}
         {% endif %}
+
+        {% if site.data.display.homepage.show_teaching %}
+        {% assign count_teaching = site.teaching | size %}
+        {% if count_teaching > 0 %}
+        {% include widgets/teaching_card.html limit=site.data.display.homepage.num_teaching %}
+        {% endif %}
+        {% endif %}
+
+        {% if site.data.display.homepage.show_service %}
+        {% assign count_service = site.service | size %}
+        {% if count_service > 0 %}
+        {% include widgets/service_card.html limit=site.data.display.homepage.num_service %}
+        {% endif %}
+        {% endif %}
+
+        {% if site.data.display.homepage.show_books %}
+        {% assign count_books = site.books | size %}
+        {% if count_books > 0 %}
+        {% include widgets/books_card.html limit=site.data.display.homepage.num_books %}
+        {% endif %}
+        {% endif %}
+
+        {% if site.data.display.homepage.show_awards %}
+        {% assign count_awards = site.awards | size %}
+        {% if count_awards > 0 %}
+        {% include widgets/awards_card.html limit=site.data.display.homepage.num_awards %}
+        {% endif %}
+        {% endif %}
+
     </div>
 </div>
