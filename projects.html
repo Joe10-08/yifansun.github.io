@@ -8,94 +8,48 @@ navbar_title: Projects
 <div class="col-12">
 
 <h2 class="pt-4">
-Research Projects
+科研项目 (Research Projects)
 </h2>
 
-<div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-
-{% assign research_projects = site.project | where:"category","科研项目" %}
-
+<div class="my-0 p-0 bg-white shadow-sm rounded-xl text-profile-bio">
+{% assign research_projects = site.project | where:"category","科研项目" | sort: "date" | reverse %}
 {% for item in research_projects %}
-
 <div class="p-3 border-bottom border-gray">
-
 <h5 class="mb-1">
 {{ item.title }}
 </h5>
-
-
+{% if item.organization %}
 <p class="small mb-1">
-
 {{ item.organization }}
-
 </p>
-
-
-<p class="small text-muted mb-0">
-
-编号：{{ item.number }} |
-
-时间：{{ item.period }} |
-
-{{ item.role }} |
-
-{{ item.status }}
-
+{% endif %}
+<p class="small text-muted mb-0 no-break">
+{% if item.number %}编号：{{ item.number }} | {% endif %}时间：{{ item.period }} | {{ item.role }} | {{ item.status }}
 </p>
-
-
 </div>
-
 {% endfor %}
-
 </div>
-
 
 <h2 class="pt-4">
-Teaching Reform Projects
+教改项目 (Teaching Reform Projects)
 </h2>
 
-
-<div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-
-{% assign teaching_projects = site.project | where:"category","教改项目" %}
-
-
+<div class="my-0 p-0 bg-white shadow-sm rounded-xl text-profile-bio">
+{% assign teaching_projects = site.project | where:"category","教改项目" | sort: "date" | reverse %}
 {% for item in teaching_projects %}
-
-
 <div class="p-3 border-bottom border-gray">
-
-
 <h5 class="mb-1">
 {{ item.title }}
 </h5>
-
-
 <p class="small mb-1">
 {{ item.organization }}
 </p>
-
-
-<p class="small text-muted mb-0">
-
-时间：{{ item.period }} |
-
-{{ item.role }} |
-
-{{ item.status }}
-
+<p class="small text-muted mb-0 no-break">
+时间：{{ item.period }} | {{ item.role }} | {{ item.status }}
 </p>
-
-
 </div>
-
-
 {% endfor %}
-
-
 </div>
-
 
 </div>
 </div>

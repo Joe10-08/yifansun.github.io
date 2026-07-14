@@ -4,7 +4,8 @@ navbar_name: "孙怡帆"
 
 positions:
 - name: Professor
-- name: School of Statistics
+- name: Department Head
+- name: Department of Mathematical Statistics, School of Statistics
 - name: Renmin University of China
   logo: /assets/images/badges/ruc.jpg
 - name: Room 1007, Mingde Main Building
