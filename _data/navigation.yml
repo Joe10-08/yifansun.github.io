@@ -6,6 +6,6 @@ pages:
 - name: Home (Layout 2)
   url: /index_layout2
 - name: Publications
-  url: /publications
+  url: /publications #注意小写
 - name: Projects
-  url: /Projects
+  url: /projects   #注意小写
