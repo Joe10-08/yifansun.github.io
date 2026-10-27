@@ -9,3 +9,6 @@ pages:
   url: /publications #注意小写
 - name: Projects
   url: /projects   #注意小写
+- name: Patents
+  url: /patents   #注意小写
+
